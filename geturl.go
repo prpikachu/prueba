@@ -41,7 +41,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	//convert the feed in to string	
 	feedx := BytesToString(feed)
 	//get large images
-	feedr := strings.Replace(feedx, "236x", "1200x", -1)
+	feedr := strings.Replace(feedx, "236x", "originals", -1)
 	//replace empty descriptions
 	feeds := strings.Replace(feedr, "<description></description>", "<description>hid360.com</description>", -1)
 	//replace all titles
